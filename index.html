@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Sounding Rockets</title>
-
-    <!-- DEFINE INTERNAL CSS HERE USING THE STYLE TAG -->
+    <title>Sounding Rockets</title>
     <style>
-        /* 1. Global Styles */
+        
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; /*Removes the default space outside the body*/
+            padding: 0;/*Removes the default inner spacing of the body*/
             color: #ffffff;
 
-            /* Backup colour. If rocket.jpg fails to load, the page stays dark
-               and the white text is still readable. */
-            background-color: #000000;
+            /* Backup colour*/
+            background-color: #080323;
         }
 
-        /* BACKGROUND IMAGE
-           The picture sits on a fixed layer behind the page instead of using
-           background-attachment: fixed, which is unreliable on phones. */
-        body::before {
-            content: '';
+        /* BACKGROUND IMAGE*/
+        body::before { /*directed to body of webpg and before indicates the lower layer for bg*/            content: '';
             position: fixed;
             top: 0;
             right: 0;
@@ -31,31 +25,31 @@
             left: 0;
             z-index: -1;
             background-image: url('rocket.jpg');
-            background-size: cover;      /* Stretches the image across the whole screen */
-            background-position: center; /* Keeps the middle of the image visible */
+            background-size: cover;      /*Stretches the image across the whole screen*/
+            background-position: center; /*Keeps the middle of the image visible*/
             background-repeat: no-repeat;
         }
 
-        /* 2. Header Layout */
+        /*Header Layout*/
         header {
             text-align: center;
-            padding: 50px 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent tint for text readability */
+            padding: 50px 20px;/* 50 px added at top and bottom and 20 at l and r*/
+            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent tint*/
         }
 
-        header h1 {
+        header h1 { /*selects h1 heading inside header*/
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 10px; /*space below heading*/
         }
 
-        /* 3. Main Content Layout */
+        /*Main Content Layout*/
         .content-container {
             max-width: 800px;
             margin: 40px auto; /* Centers the content box on the screen */
             padding: 0 20px;
         }
 
-        /* Semi-transparent boxes to make content readable over the dark space background */
+        /* Semi-transparent boxes to make content readable*/
         .info-card {
             background-color: rgba(255, 255, 255, 0.1);
             -webkit-backdrop-filter: blur(5px); /* Safari support */
@@ -81,11 +75,11 @@
         }
 
         /* Bullet and numbered list styling */
-        ul, ol {
+        ul, ol { /*unordered and ordered list resp*/
             padding-left: 20px;
         }
 
-        li {
+        li {/*individual item list*/
             margin-bottom: 10px;
             line-height: 1.6;
         }
@@ -97,10 +91,10 @@
 
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: collapse;/*combines adjacent table borders instead of leaving separate gaps between them*/
         }
 
-        th, td {
+        th, td {/*these are table cells: th-header and td-data cell*/
             text-align: left;
             padding: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -117,7 +111,7 @@
             margin-top: 12px;
         }
 
-        /* 4. Footer Layout */
+        
         footer {
             text-align: center;
             padding: 20px;
