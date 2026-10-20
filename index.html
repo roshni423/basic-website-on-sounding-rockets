@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Sounding Rockets</title>
+
+    <!-- DEFINE INTERNAL CSS HERE USING THE STYLE TAG -->
+    <style>
+        /* 1. Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+
+            /* Backup colour. If rocket.jpg fails to load, the page stays dark
+               and the white text is still readable. */
+            background-color: #000000;
+        }
+
+        /* BACKGROUND IMAGE
+           The picture sits on a fixed layer behind the page instead of using
+           background-attachment: fixed, which is unreliable on phones. */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-image: url('rocket.jpg');
+            background-size: cover;      /* Stretches the image across the whole screen */
+            background-position: center; /* Keeps the middle of the image visible */
+            background-repeat: no-repeat;
+        }
+
+        /* 2. Header Layout */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent tint for text readability */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* 3. Main Content Layout */
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto; /* Centers the content box on the screen */
+            padding: 0 20px;
+        }
+
+        /* Semi-transparent boxes to make content readable over the dark space background */
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(5px); /* Safari support */
+            backdrop-filter: blur(5px);         /* Soft glass blur effect */
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-card h2 {
+            color: #7d97e9; /* Bright blue color for subheadings */
+            margin-top: 0;
+        }
+
+        .info-card h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            line-height: 1.6;
+        }
+
+        /* Bullet and numbered list styling */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Table styling (Quick Facts and comparison) */
+        .table-wrap {
+            overflow-x: auto; /* Lets a wide table scroll sideways on small phones */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            vertical-align: top;
+        }
+
+        th {
+            color: #7d97e9;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 12px;
+        }
+
+        /* 4. Footer Layout */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Exploring Sounding Rockets</h1>
+        <p>A beginner's guide to suborbital research vehicles.</p>
+    </header>
+
+    <main class="content-container">
+
+        <!-- Section 1: What is a Sounding Rocket (with Quick Facts) -->
+        <section class="info-card">
+            <h2>What is a Sounding Rocket?</h2>
+            <p>A sounding rocket is an instrument-carrying rocket designed to take measurements and perform scientific experiments during its suborbital flight. The term comes from the nautical word "to sound," which means to take measurements or probe a depth.</p>
+
+            <h3>Quick Facts</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Typical value</th>
+                    </tr>
+                    <tr>
+                        <td>Height reached</td>
+                        <td>Roughly 50 km to over 1,000 km, depending on the rocket</td>
+                    </tr>
+                    <tr>
+                        <td>Flight time</td>
+                        <td>About 5 to 20 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Orbit</td>
+                        <td>None. The flight is suborbital.</td>
+                    </tr>
+                    <tr>
+                        <td>Weightlessness</td>
+                        <td>A few minutes near the top of the flight</td>
+                    </tr>
+                    <tr>
+                        <td>Launch method</td>
+                        <td>Usually from a short launch rail</td>
+                    </tr>
+                    <tr>
+                        <td>Recovery</td>
+                        <td>By parachute, when the payload is meant to be reused</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="note">These figures are approximate and vary from one rocket to another.</p>
+        </section>
+
+        <!-- Section 2: Parts of a Sounding Rocket (with Key Characteristics) -->
+        <section class="info-card">
+            <h2>Parts of a Sounding Rocket</h2>
+            <p>Unlike massive orbital rockets that launch satellites, sounding rockets follow a parabolic path, often use simple solid-fuel motors, and carry their instruments in the top section. Here are the main parts:</p>
+            <ul>
+                <li><strong>Nose Cone:</strong> The pointed tip that cuts through the air and protects what is behind it.</li>
+                <li><strong>Payload Section:</strong> Holds the scientific instruments or experiments.</li>
+                <li><strong>Avionics and Telemetry:</strong> Flight electronics and sensors that track the rocket and radio data back to the ground during flight.</li>
+                <li><strong>Motor:</strong> Produces the thrust that lifts the rocket. It is often solid-fuelled, which is simple, reliable and quick to launch.</li>
+                <li><strong>Fins:</strong> Keep the rocket stable and flying in a straight line. On many rockets they are slightly angled to make it spin gently, which improves stability.</li>
+                <li><strong>Recovery System:</strong> A parachute that slows the payload so scientists can safely retrieve their instruments.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: A Typical Flight -->
+        <section class="info-card">
+            <h2>A Typical Flight</h2>
+            <ol>
+                <li><strong>Launch:</strong> The rocket slides up a short launch rail and the motor ignites.</li>
+                <li><strong>Boost:</strong> The motor burns for a short time, usually well under a minute, giving the rocket its speed.</li>
+                <li><strong>Coast:</strong> The motor has burned out, but the rocket keeps climbing because of the speed it gained. Experiments often run during this stage.</li>
+                <li><strong>Apogee:</strong> The highest point of the flight, where the rocket briefly stops climbing.</li>
+                <li><strong>Descent:</strong> Gravity pulls the rocket back down toward Earth.</li>
+                <li><strong>Recovery:</strong> A parachute opens and the payload lands so it can be collected.</li>
+            </ol>
+        </section>
+
+        <!-- Section 4: Why We Use Them and What They Study -->
+        <section class="info-card">
+            <h2>Why Do We Use Them, and What Do They Study?</h2>
+            <p>Sounding rockets fly through the <em>mesosphere</em> and <em>thermosphere</em>, from roughly 50 kilometres up to well over 100 kilometres (some go even higher). The lower part of this region is too high for weather balloons to reach, but too low for satellites to stay in orbit for long, because air drag pulls them back down.</p>
+            <ul>
+                <li><strong>The Upper Atmosphere:</strong> The layers of air and electrically charged particles that affect radio signals and satellites.</li>
+                <li><strong>The Sun and Stars:</strong> Ultraviolet light and X-rays are blocked by Earth's atmosphere, so instruments must rise above it to see them.</li>
+                <li><strong>Weightlessness:</strong> Short experiments in physics, biology and materials science that need microgravity.</li>
+                <li><strong>Space Weather and Auroras:</strong> How particles from the Sun interact with Earth's upper atmosphere.</li>
+                <li><strong>New Technology:</strong> Testing sensors and parts before they are used on expensive satellites.</li>
+            </ul>
+        </section>
+
+        <!-- Section 5: Comparison -->
+        <section class="info-card">
+            <h2>Sounding Rockets vs Orbital Rockets</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Sounding rocket</th>
+                        <th>Orbital rocket</th>
+                    </tr>
+                    <tr>
+                        <td>Main goal</td>
+                        <td>Short scientific measurements</td>
+                        <td>Place satellites or crews in orbit</td>
+                    </tr>
+                    <tr>
+                        <td>Path</td>
+                        <td>Up and back down</td>
+                        <td>Up and then sideways around Earth</td>
+                    </tr>
+                    <tr>
+                        <td>Time in space</td>
+                        <td>Minutes</td>
+                        <td>Months or years for the payload</td>
+                    </tr>
+                    <tr>
+                        <td>Size and cost</td>
+                        <td>Smaller, usually cheaper</td>
+                        <td>Larger, usually costlier</td>
+                    </tr>
+                    <tr>
+                        <td>Speed needed</td>
+                        <td>Lower</td>
+                        <td>About 7.8 km/s sideways for low Earth orbit</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 6: India and Students -->
+        <section class="info-card">
+            <h2>Sounding Rockets in India and in Student Projects</h2>
+            <p>On 21 November 1963, a small sounding rocket was launched from Thumba, near Thiruvananthapuram in Kerala. Thumba lies close to the Earth's magnetic equator, which makes it an excellent place to study the upper atmosphere above the equator. That launch is widely seen as the start of India's space programme. Since then, ISRO has built its own sounding rockets, including the Rohini series, which are still used for atmospheric research.</p>
+            <p>Many universities also build small sounding-type rockets of their own. Student teams compete in events such as the Spaceport America Cup, where rockets aim for target heights like 10,000 feet or 30,000 feet and carry their own payloads. It is a hands-on way to learn about propulsion, electronics and recovery systems.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p> Sounding Rockets </p>
+    </footer>
+
+</body>
+</html>
